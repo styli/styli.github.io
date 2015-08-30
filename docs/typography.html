@@ -1,0 +1,93 @@
+---
+layout: docs
+---
+
+<div class="example">
+  {% include examples/typography.html name='headings' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='headings' %}
+{% endhighlight %}
+
+<div>
+  <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+  <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+</div>
+
+<h3>Inline elements</h3>
+<div class="example">
+  {% include examples/typography.html name='inline-elements' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='inline-elements' %}
+{% endhighlight %}
+
+<h3>hr</h3>
+<div class="example">
+  {% include examples/typography.html name='hr' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='hr' %}
+{% endhighlight %}
+
+<h3>Blockquotes</h3>
+<div class="example">
+  {% include examples/typography.html name='blockquotes' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='blockquotes' %}
+{% endhighlight %}
+
+<h3>Code</h3>
+<p>Code styling is kept basic &ndash; just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
+<div class="example">
+  {% include examples/typography.html name='code' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='code' %}
+{% endhighlight %}
+
+<h3>Lists</h3>
+<p><code>margin-bottom</code> of nested lists is removed.</p>
+<div class="example">
+  {% include examples/typography.html name='lists' type='ul' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='lists' type='ul' %}
+{% endhighlight %}
+
+<h4>Ordered</h4>
+<div class="example">
+  {% include examples/typography.html name='lists' type='ol' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='lists' type='ol' %}
+{% endhighlight %}
+
+<h4>Unstyled</h4>
+<p>Add <code>.unstyled</code> class to remove bullets. This does not effect nested lists.</p>
+<div class="example">
+  {% include examples/typography.html name='lists' type='ul' class='unstyled' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='lists' type='ul' class='unstyled' %}
+{% endhighlight %}
+
+<h4>Horizontal</h4>
+<p>Add <code>.horizontal</code> class to make a list horizontal. Useful for navigation links.</p>
+<div class="example">
+  {% include examples/typography.html name='inline-lists' class='horizontal' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='inline-lists' class='horizontal' %}
+{% endhighlight %}
+
+<h4>Justified</h4>
+<p>Add <code>.justified</code> class to have equally sized content. Useful for navigation links.</p>
+<div class="example">
+  {% include examples/typography.html name='inline-lists' class='justified' %}
+</div>
+{% highlight html %}
+{% include examples/typography.html name='inline-lists' class='justified' %}
+{% endhighlight %}

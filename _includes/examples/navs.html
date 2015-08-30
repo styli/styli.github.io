@@ -1,0 +1,13 @@
+<div class="scroll-x">
+  <ul class="{{ include.class }}">
+    <li class="active"><a href="#">Active</a></li>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li class="heading">Heading</li>
+    <li><a href="#">Other link 1</a></li>
+    <li><a href="#">Other link 2</a></li>{% if include.class == 'nav' %}
+    <li class="divider"></li>
+    <li><a href="#">Separated link 1</a></li>
+    <li><a href="#">Separated link 2</a></li>
+  {% endif %}</ul>
+</div>

@@ -1,0 +1,152 @@
+{% if include.name == 'grid-1' %}
+
+<div class="container-fluid">
+  <div class="row hidden-below-mobile">
+    <div class="column mobile-1">1</div><div class="mobile-11 columns">11</div>
+  </div>
+  <div class="row">
+    <div class="column mobile-2">2</div><div class="mobile-10 columns">10</div>
+    <div class="column mobile-3">3</div><div class="mobile-9 columns">9</div>
+    <div class="column mobile-4">4</div><div class="mobile-8 columns">8</div>
+    <div class="column mobile-5">5</div><div class="mobile-7 columns">7</div>
+  </div>
+</div>
+
+{% elsif include.name == 'grid-2' %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="column mobile-12">12</div>
+    <div class="column mobile-6">6</div><div class="mobile-6 columns">6</div>
+    <div class="column mobile-4">4</div><div class="mobile-4 columns">4</div><div class="mobile-4 columns">4</div>
+    <div class="column mobile-3">3</div><div class="mobile-3 columns">3</div><div class="mobile-3 columns">3</div><div class="mobile-3 columns">3</div>
+    <div class="column mobile-2">2</div><div class="mobile-2 columns">2</div><div class="column mobile-2">2</div><div class="mobile-2 columns">2</div><div class="column mobile-2">2</div><div class="mobile-2 columns">2</div>
+  </div>
+  <div class="row hidden-below-mobile">
+    <div class="column mobile-1">1</div><div class="mobile-1 columns">1</div><div class="column mobile-1">1</div><div class="mobile-1 columns">1</div><div class="column mobile-1">1</div><div class="mobile-1 columns">1</div><div class="column mobile-1">1</div><div class="mobile-1 columns">1</div><div class="column mobile-1">1</div><div class="mobile-1 columns">1</div><div class="column mobile-1">1</div><div class="mobile-1 columns">1</div>
+  </div>
+</div>
+
+{% elsif include.name == 'grid-3' %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="column mobile-3">width 3</div>
+    <div class="column mobile-6 offset-mobile-3">width 6 offset 3</div>
+  </div>
+</div>
+
+{% elsif include.name == 'grid-4' %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="column mobile-4 push-mobile-8">width 4 push 8</div>
+    <div class="column mobile-8 pull-mobile-4">width 8 pull 4</div>
+  </div>
+</div>
+
+{% elsif include.name == 'containers' %}
+
+<div class="container bg-light">This text is <br> inside a <br> container</div>
+<br>
+<div class="container-fluid bg-light">This text is <br> inside a <br> fluid container</div>
+
+{% elsif include.name == 'responsive-utilities' %}
+
+<table class="bordered table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Mobile <br> <small class="text-secondary">(&lt;34em)</small></th>
+      <th>Phablet <br> <small class="text-secondary">(&ge;34em)</small> </th>
+      <th>Tablet <br> <small class="text-secondary">(&ge;48em)</small></th>
+      <th>Desktop <br> <small class="text-secondary">(&ge;62em)</small></th>
+      <th>HD <br> <small class="text-secondary">(&ge;75em)</small></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.hidden-below-mobile</code></td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-below-phablet</code></td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-below-tablet</code></td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-below-desktop</code></td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-success">Visible</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-below-hd</code></td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-above-mobile</code></td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-above-phablet</code></td>
+      <td class="text-success">Visible</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-above-tablet</code></td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-above-desktop</code></td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-secondary">Hidden</td>
+      <td class="text-secondary">Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.hidden-above-hd</code></td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-success">Visible</td>
+      <td class="text-secondary">Hidden</td>
+    </tr>
+  </tbody>
+</table>
+
+
+{% endif %}

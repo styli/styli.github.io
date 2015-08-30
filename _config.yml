@@ -1,0 +1,27 @@
+# Site settings
+title: Styli
+description: >
+  Styles for most commonly used web components.
+baseurl: '/'
+url: https://styli.github.io
+host: 0.0.0.0
+permalink: pretty
+dev: false
+
+links:
+  download: https://github.com/styli/styli/archive/v0.1.0.zip
+  repo: https://github.com/styli/styli
+  cdn: https://cdn.rawgit.com/styli/styli/v0.1.0/css/styli.min.css
+
+docs: [grid, forms, buttons, navs, navbar, typography, tables, helpers]
+subnav:
+  grid: [containers, breakpoints, responsive utilities]
+  forms: [hidden labels, horizontal, sizes, required, disabled, readonly, fieldset]
+  buttons: [colors, outline, sizes, active, disabled]
+  navs: [horizontal, justified]
+  typography: [inline elements, code, lists]
+  tables: [bordered]
+  helpers: [alignment, colors, sizes, hidden content]
+
+colors: [primary, secondary, success, error]
+devices: [mobile, phablet, tablet, desktop, hd]

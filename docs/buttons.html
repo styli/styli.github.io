@@ -1,0 +1,71 @@
+---
+layout: docs
+---
+
+<p>Add <code>.button</code> to <code>a</code>, <code>button</code>, <code>input[type="button"]</code>, <code>input[type="submit"]</code> elements.</p>
+<div class="example">
+  {% include examples/buttons.html name='tags' %}
+</div>
+{% highlight html %}
+{% include examples/buttons.html name='tags' %}
+{% endhighlight %}
+
+<h3>Colors</h3>
+<p>Add <code>.success</code>, <code>.error</code> etc., classes to change color of buttons. Colors can be easily added or removed by editing the <code>colors</code> variable in <em>variables.styl</em> file.</p>
+<div class="example">
+  {% include examples/buttons.html name='variants' class='button' %}
+</div>
+{% highlight html %}
+{% include examples/buttons.html name='variants' class='button' %}
+{% endhighlight %}
+
+<h3>Outline</h3>
+<p>Add <code>.outline</code> class to give a cleaner look to buttons.</p>
+<div class="example">
+  {% include examples/buttons.html name='variants' class='outline button' %}
+</div>
+{% highlight html %}
+{% include examples/buttons.html name='variants' class='outline button' %}
+{% endhighlight %}
+
+<h3>Sizes</h3>
+<p>Change size using <code>.size-small</code>, <code>.size-large</code> helper classes.</p>
+<div class="example">
+  {% include examples/buttons.html name='types' class='size-large' %}
+</div>
+{% highlight html %}
+{% include examples/buttons.html name='types' class='size-large' %}
+{% endhighlight %}
+
+<div class="example">
+  {% include examples/buttons.html name='types' class='size-small' %}
+</div>
+{% highlight html %}
+{% include examples/buttons.html name='types' class='size-small' %}
+{% endhighlight %}
+
+<p>Set <code>display</code> property of buttons or other content to <code>block</code> using the <code>.block</code> helper class.</p>
+<div class="example">
+  {% include examples/buttons.html name='types' class='block' %}
+</div>
+{% highlight html %}
+{% include examples/buttons.html name='types' class='block' %}
+{% endhighlight %}
+
+<h3>Active</h3>
+<p>Add <code>.active</code> class to buttons.</p>
+<div class="example">
+  {% include examples/buttons.html name='types' class='active' %}
+</div>
+{% highlight html %}
+{% include examples/buttons.html name='types' class='active' %}
+{% endhighlight %}
+
+<h3>Disabled</h3>
+<p>Add <code>disabled</code> attribute to buttons to disable them. This doesn't work on <code>a</code> tags.</p>
+<div class="example">
+  {% include examples/buttons.html name='tags' disabled='' %}
+</div>
+{% highlight html %}
+{% include examples/buttons.html name='tags' disabled='' %}
+{% endhighlight %}

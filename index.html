@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<div class="bg-primary bg-dark size-large text-center hero">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+  <p>
+    <a target="_blank" class="button" href="{{ site.links.download }}">Download</a>
+    <a class="button" href="{{ site.baseurl }}docs/{{ site.docs[0] | slugify }}/#top">Documentation</a>
+    <a target="_blank" class="button" href="{{ site.links.repo }}">GitHub</a>
+  </p>
+</div>
+
+<br>
+
+<div class="container">
+  <div class="row text-center">
+    <div class="column phablet-4">
+      <h3>Overview</h3>
+      <p>Mobile-first responsive design with <code>rem</code> and <code>em</code> units. Built on top of normalize.css (removed &lt; IE 11 fixes). Styles for {% for doc in site.docs %}<a href="{{ site.baseurl }}docs/{{ doc | slugify }}/#top">{{ doc | capitalize }}</a>, {% endfor %} are available.</p>
+    </div>
+    <div class="column phablet-4">
+      <h3>Stylus</h3>
+      <p>Source code is written in <a target="_blank" href="https://learnboost.github.io/stylus/">Stylus</a>. Stylus and Sass are equally good in terms of features but I like Stylus syntax as it is more flexible, clean and JavaScript like.</p>
+    </div>
+    <div class="column phablet-4">
+      <h3>Browser Support</h3>
+      <ul class="unstyled">
+        <li>Internet Explorer 11+</li>
+        <li>Chrome (latest)</li>
+        <li>Firefox (latest)</li>
+        <li>Safari (latest)</li>
+        <li>Opera (latest)</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h1>Get Started</h1>
+  <p>Include the following code in <code>&lt;head&gt;</code> tag of your HTML file.</p>
+{% highlight html %}
+<link rel="stylesheet" href="{{ site.links.cdn }}">
+{% endhighlight %}
+
+  <h3>HTML template</h3>
+{% highlight html %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="">
+
+    <!-- {{ site.title }} CSS -->
+    <link rel="stylesheet" href="{{ site.links.cdn }}">
+  </head>
+  <body>
+    <!--[if lt IE 11]>
+      <div class="bg-error bg-dark size-large">You are using a <strong>shitty</strong> browser. Please <a target="_blank" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <h1>Hello, world!</h1>
+  </body>
+</html>
+{% endhighlight %}
+</div>

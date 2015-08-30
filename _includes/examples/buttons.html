@@ -1,0 +1,18 @@
+{% if include.name == 'tags' %}
+
+<a{% if include.disabled %} disabled{% endif %} class="button" href="#" role="button">Link</a>
+<button{% if include.disabled %} disabled{% endif %} class="button" type="submit">Button</button>
+<input{% if include.disabled %} disabled{% endif %} class="button" type="button" value="Input">
+<input{% if include.disabled %} disabled{% endif %} class="button" type="submit" value="Submit">
+
+{% elsif include.name == 'variants' %}
+
+{% for color in site.colors %}<button{% if include.disabled %} disabled{% endif %} class="{{ color }} {{ include.class }}" type="button">{{ color }}</button>
+{% endfor %}
+
+{% elsif include.name == 'types' %}
+
+<button{% if include.disabled %} disabled{% endif %} class="{{ include.class }} button" type="button">{{ include.class }} button</button>
+<button{% if include.disabled %} disabled{% endif %} class="{{ include.class }} outline button" type="button">{{ include.class }} button</button>
+
+{% endif %}

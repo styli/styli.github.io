@@ -1,0 +1,32 @@
+{% assign pageName = page.name | remove:'.html' %}
+{% assign pageTitle = pageName | capitalize %}
+
+{% include header.html %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="tablet-3 columns">
+      <div class="bg-light">
+        {% include nav.html %}
+      </div>
+    </div>
+    <div class="tablet-9 columns main-content">
+      <h1 id="top">{{ pageTitle }}</h1>
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+<script src="{{ site.baseurl }}assets/anchor.js"></script>
+<script>
+  (function() {
+    var headings = '.main-content > h3, .main-content > h4';
+    anchors.add(headings);
+    headings = document.querySelectorAll(headings + ', .main-content > h1');
+    for (var i = 0; i < headings.length; i++) {
+      headings[i].innerHTML += '<a class="right" href="#">&uarr;</a>'
+    };
+  })();
+</script>
+
+{% include footer.html %}

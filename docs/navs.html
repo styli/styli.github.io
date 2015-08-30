@@ -1,0 +1,29 @@
+---
+layout: docs
+---
+
+<p>Add <code>.nav</code> class to list element to convert it into a navigation menu. <code>.active</code>, <code>.heading</code>, <code>.divider</code> classes can be used on <code>li</code> tags.</p>
+<div class="example">
+  {% include examples/navs.html class='nav' %}
+</div>
+{% highlight html %}
+{% include examples/navs.html class='nav' %}
+{% endhighlight %}
+
+<h3>Horizontal</h3>
+<p>Add <code>.horizontal</code> class to a nav to make it horizontal. Wrap the entire nav inside a <code>.scroll-x</code> element to make it horizontally scrollable on smaller screens. <code>.divider</code> class is not supported.</p>
+<div class="example">
+  {% include examples/navs.html class='horizontal nav' %}
+</div>
+{% highlight html %}
+{% include examples/navs.html class='horizontal nav' %}
+{% endhighlight %}
+
+<h3>Justified</h3>
+<p>Add <code>.justified</code> class to have equally sized links in nav. Wrap the entire nav inside a <code>.scroll-x</code> element to make it horizontally scrollable on smaller screens. <code>.divider</code> class is not supported.</p>
+<div class="example">
+  {% include examples/navs.html class='justified nav' %}
+</div>
+{% highlight html %}
+{% include examples/navs.html class='justified nav' %}
+{% endhighlight %}

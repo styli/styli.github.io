@@ -1,0 +1,16 @@
+<ul class="nav">
+  <li><a href="{{ site.baseurl }}">Home</a></li>
+  <li class="heading">Documentation</li>
+  {% for doc in site.docs %}
+  <li{% if doc == pageName %} class="active"{% endif %}>
+    <a href="{{ site.baseurl }}docs/{{ doc | slugify }}/#top">{{ doc | capitalize }}</a>
+    {% if doc == pageName and site.subnav.[doc] %}
+    <ul class="nav">
+      {% for subdoc in site.subnav.[doc] %}
+      <li><a href="{{ site.baseurl }}docs/{{ doc | slugify }}/#{{ subdoc | slugify }}">{{ subdoc | capitalize }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

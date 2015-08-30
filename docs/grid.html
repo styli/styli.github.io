@@ -1,0 +1,72 @@
+---
+layout: docs
+---
+
+<p>
+  It is a 12-column fluid grid. Use <code>.row</code> for rows and <code>.column</code> or <code>.columns</code> for columns.
+  Specify column widths using {% for device in site.devices %}<code>.{{ device }}-*</code> {% endfor %} classes. Grids can be nested.
+</p>
+<div class="example grid">
+  {% include examples/grid.html name='grid-1' %}
+</div>
+{% highlight html %}
+{% include examples/grid.html name='grid-1' %}
+{% endhighlight %}
+
+<div class="example grid">
+  {% include examples/grid.html name='grid-2' %}
+</div>
+{% highlight html %}
+{% include examples/grid.html name='grid-2' %}
+{% endhighlight %}
+
+<h3>Offset</h3>
+<p>Use <code>.offset-*-*</code> classes to set a left margin on columns.</p>
+<div class="example grid">
+  {% include examples/grid.html name='grid-3' %}
+</div>
+{% highlight html %}
+{% include examples/grid.html name='grid-3' %}
+{% endhighlight %}
+
+<h3>Push Pull</h3>
+<p>Use <code>.push-*-*</code> and <code>.pull-*-*</code> classes to change content order. Useful for <abbr title="Search Engine Optimization">SEO</abbr>.</p>
+<div class="example grid">
+  {% include examples/grid.html name='grid-4' %}
+</div>
+{% highlight html %}
+{% include examples/grid.html name='grid-4' %}
+{% endhighlight %}
+
+<h3>Containers</h3>
+<p><code>.container</code> has <code>max-width</code> property set to a value which varies according to the screen size. <code>.container-fluid</code> is a full width wrapper with some padding.</p>
+<div class="example grid">
+  {% include examples/grid.html name='containers' %}
+</div>
+{% highlight html %}
+{% include examples/grid.html name='containers' %}
+{% endhighlight %}
+
+<h3>Breakpoints</h3>
+
+{% highlight css %}
+/* Mobile first queries */
+
+/* Phablet */
+@media (min-width: 34em) {}
+
+/* Tablet */
+@media (min-width: 48em) {}
+
+/* Desktop */
+@media (min-width: 62em) {}
+
+/* HD */
+@media (min-width: 75em) {}
+{% endhighlight %}
+
+<h3>Responsive utilities</h3>
+<p><code>.hidden-below-&lt;device&gt;</code> hides content on devices smaller than and including the specified device. <code>.hidden-above-&lt;device&gt;</code> hides content on devices larger than and including the specified device.</p>
+<div class="scroll-x">
+{% include examples/grid.html name='responsive-utilities' %}
+</div>

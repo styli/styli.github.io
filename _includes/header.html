@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ site.title }}{% if pageTitle %} &middot; {{ pageTitle }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    {% if site.dev != 'true' %}
+    <link rel="stylesheet" href="{{ site.links.cdn }}">
+    {% else %}
+    <link rel="stylesheet" href="http://{{ site.host }}/css/styli/css/styli.min.css">
+    {% endif %}
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/docs.css">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    {% if site.dev == 'true' %}<script src="http://{{ site.host }}:35729/livereload.js"></script>{% endif %}
+  </head>
+
+  <body>
+    <!--[if lt IE 11]>
+      <div class="bg-error bg-dark size-large">You are using a <strong>shitty</strong> browser. Please <a target="_blank" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->

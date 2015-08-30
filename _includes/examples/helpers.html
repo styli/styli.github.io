@@ -1,0 +1,47 @@
+{% if include.name == 'text' %}
+
+<p class="text-left">Left aligned text</p>
+<p class="text-center">Center aligned text</p>
+<p class="text-right">Right aligned text</p>
+<p class="text-justify">Justified text</p>
+<p class="nowrap">No wrap text</p>
+
+<p class="lowercase">Lowercased text</p>
+<p class="uppercase">Uppercased text</p>
+<p class="capitalize">Capitalized text</p>
+
+<p class="bold">Bold text</p>
+<p class="italic">Italic text</p>
+
+<p style="max-width: 6.25rem;" class="truncate" title="This text gets truncated">This text gets truncated</p>
+
+{% elsif include.name == 'alignment' %}
+
+<div class="clearfix">
+  <div class="left bg-light">Float left</div>
+  <div class="right bg-light">Float right</div>
+</div>
+
+<div style="width: 6.25rem;" class="center block bg-light">center block</div>
+
+{% elsif include.name == 'colors' %}
+
+{% for color in site.colors %}<p class="text-{{ color }}">This is a {{ color }} text</p>
+{% endfor %}
+{% for color in site.colors %}<p class="bg-{{ color }} bg-dark size-medium">This has {{ color }} background</p>
+{% endfor %}
+<p class="bg-light size-medium">This has faded background</p>
+
+{% elsif include.name == 'sizes' %}
+
+<p class="size-small bg-light">small content</p>
+<p class="size-medium bg-light">medium content</p>
+<p class="size-large bg-light">large content</p>
+
+{% elsif include.name == 'hidden-content' %}
+
+<p hidden>This content is hidden</p>
+<p class="invisible">This content is invisible</p>
+<p class="sr-only">This content is visible to screen readers only</p>
+
+{% endif %}

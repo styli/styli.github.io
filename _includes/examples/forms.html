@@ -1,0 +1,75 @@
+{% if include.name == 'sign-up' %}
+
+<form method="post">
+  <div class="row">
+    <div class="phablet-6 columns">
+      <label for="input-11"{% if include.labelClass %} class="{{ include.labelClass }}"{% endif %}>First name</label>
+      <input type="text" class="input" placeholder="First name" id="input-11">
+    </div>
+    <div class="phablet-6 columns">
+      <label for="input-12"{% if include.labelClass %} class="{{ include.labelClass }}"{% endif %}>Last name</label>
+      <input type="text" class="input" placeholder="Last name" id="input-12">
+    </div>
+  </div>
+
+  <label for="input-13"{% if include.labelClass %} class="{{ include.labelClass }}"{% endif %}>Email</label>
+  <input type="email" class="input" placeholder="Email" id="input-13" required>
+  <label for="input-14"{% if include.labelClass %} class="{{ include.labelClass }}"{% endif %}>Password</label>
+  <input type="password" class="input" placeholder="Password" id="input-14">
+
+  <label>Birthday</label>
+  <div class="row">
+    <div class="tablet-2 phablet-4 mobile-6 columns"><select class="input"><option>Day</option></select></div>
+    <div class="tablet-2 phablet-4 mobile-6 columns"><select class="input"><option>Month</option></select></div>
+    <div class="tablet-2 phablet-4 mobile-6 columns"><select class="input"><option>Year</option></select></div>
+  </div>
+
+  <label class="radio"><input type="radio" name="gender"> Female</label>
+  <label class="radio"><input type="radio" name="gender"> Male</label> <br>
+  <label class="checkbox"><input type="checkbox"> I agree to the terms and conditions</label> <br>
+
+  <button type="submit" class="primary button">Sign up</button>
+</form>
+
+{% elsif include.name == 'sign-in-horizontal' %}
+
+<form>
+  <div class="row">
+    <div class="column tablet-2"><label for="input-21">Email</label></div>
+    <div class="column tablet-10"><input type="email" class="input" placeholder="Email" id="input-21"></div>
+    <div class="column tablet-2"><label for="input-22">Password</label></div>
+    <div class="column tablet-10"><input type="password" class="input" placeholder="Password" id="input-22"></div>
+    <div class="column tablet-10 offset-tablet-2"><label class="checkbox"><input type="checkbox"> Remember me</label></div>
+    <div class="column tablet-10 offset-tablet-2"><input class="primary button" type="submit" value="Sign in"></div>
+  </div>
+</form>
+
+{% elsif include.name == 'sizing' %}
+
+<input type="text" class="input size-large" placeholder="large input">
+<textarea class="input size-large" placeholder="large textarea"></textarea>
+<select class="input size-large"><option>large select</option></select>
+<input type="text" class="input size-small" placeholder="small input">
+<textarea class="input size-small" placeholder="small textarea"></textarea>
+<select class="input size-small"><option>small select</option></select>
+
+{% elsif include.name == 'attributes' %}
+
+<input {{ include.attribute }} type="text" class="input" placeholder="{{ include.attribute }} input">
+<textarea {{ include.attribute }} class="input" placeholder="{{ include.attribute }} textarea"></textarea>
+{% if include.attribute != 'readonly' %}<select {{ include.attribute }} class="input"><option value="">{{ include.attribute }} select</option></select>{% endif %}
+
+{% elsif include.name == 'fieldset' %}
+
+<fieldset>
+  <input type="text" class="input" placeholder="input">
+  <textarea class="input" placeholder="textarea"></textarea>
+  <select class="input"><option>select</option></select>
+</fieldset>
+<fieldset disabled>
+  <input type="text" class="input" placeholder="disabled input">
+  <textarea class="input" placeholder="disabled textarea"></textarea>
+  <select class="input"><option>disabled select</option></select>
+</fieldset>
+
+{% endif %}

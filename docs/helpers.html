@@ -1,0 +1,47 @@
+---
+layout: docs
+---
+
+<div class="example">
+  {% include examples/helpers.html name='text' %}
+</div>
+{% highlight html %}
+{% include examples/helpers.html name='text' %}
+{% endhighlight %}
+
+<h3>Alignment</h3>
+<p>Use <code>.left</code> and <code>.right</code> classes to float content. Wrap floated elements in a <code>.clearfix</code>.</p>
+<p><code>.center</code> class sets <code>margin-left</code> and <code>margin-right</code> to <code>auto</code>. <code>.block</code> class sets <code>display</code> to <code>block</code></p>
+<div class="example">
+  {% include examples/helpers.html name='alignment' %}
+</div>
+{% highlight html %}
+{% include examples/helpers.html name='alignment' %}
+{% endhighlight %}
+
+<h3>Colors</h3>
+<p>Add <code>.bg-dark</code> class to set text color to white on dark backgrounds. Use <code>.bg-light</code> class to apply a light background and to highlight content. Colors can be easily added or removed by editing the <code>colors</code> variable in <em>variables.styl</em> file.</p>
+<div class="example">
+  {% include examples/helpers.html name='colors' %}
+</div>
+{% highlight html %}
+{% include examples/helpers.html name='colors' %}
+{% endhighlight %}
+
+<h3>Sizes</h3>
+<p>These classes also add padding and are used in sizing input and button elements. They can be used with <code>.bg-*</code> classes to give <em>alerts</em> or <em>notices</em> like appearance.</p>
+<div class="example">
+  {% include examples/helpers.html name='sizes' %}
+</div>
+{% highlight html %}
+{% include examples/helpers.html name='sizes' %}
+{% endhighlight %}
+
+<h3>Hidden content</h3>
+<p>Add <code>hidden</code> attribute to hide content. You can also use responsive utilities <code>.hidden-*-*</code> to hide content.</p>
+<div class="example">
+  {% include examples/helpers.html name='hidden-content' %}
+</div>
+{% highlight html %}
+{% include examples/helpers.html name='hidden-content' %}
+{% endhighlight %}

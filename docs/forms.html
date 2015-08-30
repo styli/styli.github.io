@@ -1,0 +1,75 @@
+---
+layout: docs
+---
+
+<p>Add <code>.input</code> to inputs, textarea or select. Use <code>.checkbox</code> and <code>.radio</code> for checkbox and radio elements respectively. Arrange content using grid classes.</p>
+<div class="example">
+  {% include examples/forms.html name='sign-up' %}
+</div>
+{% highlight html %}
+{% include examples/forms.html name='sign-up' %}
+{% endhighlight %}
+
+<h3>Hidden labels</h3>
+<p>Use <code>.sr-only</code> class to hide labels.</p>
+<div class="example">
+  {% include examples/forms.html name='sign-up' labelClass='sr-only' %}
+</div>
+{% highlight html %}
+{% include examples/forms.html name='sign-up' labelClass='sr-only' %}
+{% endhighlight %}
+
+
+<h3>Horizontal</h3>
+<p>Use grid classes to arrange content.</p>
+<div class="example">
+  {% include examples/forms.html name='sign-in-horizontal' %}
+</div>
+{% highlight html %}
+{% include examples/forms.html name='sign-in-horizontal' %}
+{% endhighlight %}
+
+<h3>Sizes</h3>
+<p>Change size using <code>.size-small</code>, <code>.size-large</code> helper classes.</p>
+<div class="example">
+  {% include examples/forms.html name='sizing' %}
+</div>
+{% highlight html %}
+{% include examples/forms.html name='sizing' %}
+{% endhighlight %}
+
+<h3>Required</h3>
+<p>Add <code>required</code> attribute for compulsory fields. Styling of required fields is done only when <code>colors.error</code> variable is set in <em>variables.styl</em> file.</p>
+<div class="example">
+  {% include examples/forms.html name='attributes' attribute='required' %}
+</div>
+{% highlight html %}
+{% include examples/forms.html name='attributes' attribute='required' %}
+{% endhighlight %}
+
+<h3>Disabled</h3>
+<p>Add <code>disabled</code> attribute to disable fields. Multiple fields can be disabled by wrapping them in a <code>fieldset</code> and adding <code>disabled</code> attribute to it.</p>
+<div class="example">
+  {% include examples/forms.html name='attributes' attribute='disabled' %}
+</div>
+{% highlight html %}
+{% include examples/forms.html name='attributes' attribute='disabled' %}
+{% endhighlight %}
+
+<h3>Readonly</h3>
+<p>Add <code>readonly</code> attribute to make inputs non-editable but readable.</p>
+<div class="example">
+  {% include examples/forms.html name='attributes' attribute='readonly' %}
+</div>
+{% highlight html %}
+{% include examples/forms.html name='attributes' attribute='readonly' %}
+{% endhighlight %}
+
+<h3>Fieldset</h3>
+<p><code>fieldset</code> styles are reset to make it look like a normal <code>div</code>. Multiple fields can be disabled by wrapping them in a <code>fieldset</code> and adding <code>disabled</code> attribute to it.</p>
+<div class="example">
+  {% include examples/forms.html name='fieldset' %}
+</div>
+{% highlight html %}
+{% include examples/forms.html name='fieldset' %}
+{% endhighlight %}
